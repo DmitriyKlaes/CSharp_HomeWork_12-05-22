@@ -8,7 +8,7 @@
 
 //Трехзначное число можно сгенерировать случайно или ввести вручную.
 
-Console.WriteLine("Сгенерировать случайное трёхзначное число? (введите Y или N): ");
+Console.WriteLine("Сгенерировать случайное положительное трёхзначное число? (введите Y или N): ");
 string choice = Console.ReadLine()!;
 if (choice.ToLower() == "y" || choice.ToLower() == "n")
 {
@@ -19,9 +19,9 @@ if (choice.ToLower() == "y" || choice.ToLower() == "n")
     }
     if (choice.ToLower() == "n")
     {
-        Console.WriteLine("Введите трёхзначное число:");
+        Console.WriteLine("Введите положительное трёхзначное число:");
         number = Convert.ToInt32(Console.ReadLine());
-        if (number >= 1000)
+        if (number > 999 || number < 100)
         {
             Console.WriteLine("Неверный ввод! Попробуйте ещё раз.");
             return;

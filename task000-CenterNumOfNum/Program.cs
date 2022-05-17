@@ -6,10 +6,10 @@
 918 -> 1
 */
 
-Console.WriteLine("Введите трёхзначное число:");
+Console.WriteLine("Введите трёхзначное положительное число:");
 int number = Convert.ToInt32(Console.ReadLine());
 int centerNumber = (number % 100) / 10;
-if (number >= 1000)
+if (number > 999 || number < 100)
 {
     Console.WriteLine("Неверный ввод! Попробуйте ещё раз.");
     return;
