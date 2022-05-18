@@ -6,21 +6,22 @@
 32679 -> 6
 */
 
-Console.WriteLine("Введите число: ");
+Console.WriteLine("Введите число:");
 int number = Convert.ToInt32(Console.ReadLine());
+int numberSave = number;
 if (number > 99)
 {
-    for (int div = 10; div <= number / 10; div = div * 10)
-    {
-        if (div > number / 100)
-        {
-        int result = (number % div) / (div / 10);
-        Console.WriteLine($"Третья цифра числа {number} является {result}");
-        break;
-        }
-    }
+    for (int div = 10; number > 1000; number = number / div);
+    int result = number % 10;
+    Console.WriteLine($"Третья цифра числа {numberSave} является {result}");
+}
+else if (number < -99)
+{
+    for (int div = 10; number < -1000; number = number / div);
+    int result = number % 10;
+    Console.WriteLine($"Третья цифра числа {numberSave} является {Math.Abs(result)}");
 }
 else
 {
-    Console.WriteLine($"В числе {number} третьей цифры нет!");
+    Console.WriteLine($"В числе {numberSave} третьей цифры нет!");
 }
