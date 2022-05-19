@@ -6,47 +6,62 @@
 */
 
 Console.WriteLine("Введите день недели: ");
-
-int number = Convert.ToInt32(Console.ReadLine());
-switch ((number - 1) % 7 + 1) // выдает с любого числа день недели
+int day = Convert.ToInt32(Console.ReadLine());
+switch (day)
 {
     case 1:
         {
-            System.Console.WriteLine("Понедельник - рабочий день");
+            Console.Write("Понедельник - ");
             break;
         }
     case 2:
         {
-            System.Console.WriteLine("Вторник - рабочий день");
+            Console.Write("Вторник - ");
             break;
         }
     case 3:
         {
-            System.Console.WriteLine("Среда - рабочий день");
+            Console.Write("Среда - ");
             break;
         }
     case 4:
         {
-            System.Console.WriteLine("Четверг - рабочий день");
+            Console.Write("Четверг - ");
             break;
         }
     case 5:
         {
-            System.Console.WriteLine("Пятница - рабочий день");
+            Console.Write("Пятница - ");
             break;
         }
     case 6:
         {
-            System.Console.WriteLine("Суббота - выходной день");
+            Console.Write("Суббота - ");
             break;
         }
     case 7:
         {
-            System.Console.WriteLine("Воскресенье - выходной день");
+            Console.Write("Воскресенье - ");
             break;
         }
-
     default:
         {
+            break;
         }
+}
+if (day == 6 || day == 7)
+{
+    Console.Write("это выходной");
+}
+else if (day > 7)
+{
+    Console.WriteLine("Дней недели всего 7!");
+}
+else if (day < 1)
+{
+    return;
+}
+else
+{
+    Console.Write("это рабочий день");
 }

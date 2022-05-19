@@ -9,11 +9,11 @@ Console.WriteLine("Введите день недели:");
 int day = Convert.ToInt32(Console.ReadLine());
 if (day == 6 || day == 7)
 {
-    System.Console.WriteLine("Этот день является выходным");
+    Console.WriteLine("Этот день является выходным");
 }
 else if (day > 7)
 {
-    System.Console.WriteLine("Дней недели всего 7!");
+    Console.WriteLine("Дней недели всего 7!");
 }
 else if (day < 1)
 {
@@ -21,5 +21,5 @@ else if (day < 1)
 }
 else
 {
-    System.Console.WriteLine("Это рабочий день");
+    Console.WriteLine("Это рабочий день");
 }
